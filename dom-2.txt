@@ -1,0 +1,56 @@
+TRAVERSING
+1 parentNode, parenElement //
+Dom.parentNode.parentNode .parentNode tới mãi , tìm thẻ cha của nó
+// về cơ bản parentNode và parenElement như nhau nhưng nếu tìm thẻ cha
+tận cùng của nó thì parentNode sẽ trả ra document còn parenElement trả
+ra null
+
+
+2 previousElementSibling    
+_DOM.previousElementSibling -> trả ra phần tử đứng trước Dom
+_DOM.nextElementSibling -> trả ra phần tử đứng sau Dom
+_DOM.nextSibling,_DOM.previousSibling  trả ra đoạn text nếu sau,hoặc trước đó là text  
+nếu liề với html thì 1 cái node bình thường
+
+
+
+_DOM.firstElementChild trả ra Element đầu tiên
+_DOM.lastElementChild trả ra elemtn cuối cùng
+_DOM.firstChild,_DOM.lastChild  trả ra Element đầu tiên,hoặc cuối bao 
+gồm cả text
+_DOM.children  trả ra các phần tử bên trong 
+nếu DOM.childrenNodes  lấy cả text cả khoảng trắng lẫn xún hàng
+
+
+
+## offset lấy cả border
+DOM.offsetHeight  trả ra chiều cao của element
+DOM.offsetWidth trả ra chiều rộng của element
+DOM.offsetTop  khoảng cách của nó so với bên trên so với body
+DOM.offsetLeft   khoảng cách của nó so với bên trái
+
+
+## client lấy cả border
+DOM.clientHeight  trả ra chiều cao của element
+DOM.clientWidth trả ra chiều rộng của element
+DOM.clientTop  khoảng cách của nó so với border bên ngoài
+DOM.clientLeft   khoảng cách của nó so với border bên ngoài bên trái
+
+
+WINDOWW NHỮNG CÁI NHƯ SCROLL BÊN Ngoài máy tính
+_window.scrollX  XEM SCROLL theo chiều ngnag vi dụ window.scroll kgoangr cách của scroll ngang so với bên trái
+_window.scrolly XEM SCROLL theo chiều dọc vi dụ window.scroll kgoangr cách của scroll dọc so với bên trên
+_window.innerWidth trả ra độ rộng màn hình theo màn hình chorm nếu có phần nào chiếm sẽ thu nhỏ
+_window.outerWidth   viewport máy tính thay đổi theo goolechorm   nếu bị chiếm vẫn bình thường theo gốc
+_window.innerHeight trả ra chiều cao màn hình theo màn hình chorm
+_window.outerWidth  tương tự _window.outerWidth 
+_window.screenX vị trí của chorme so với màn hình chiều ngang
+window.screenY  vị trí của chorme so với màn hình chiều dài
+
+
+/// remove item
+Dom.parentNode.removeChild(DOM) // xóa ra phần tử cha xóa lại chính nó hoặc Dom.remove
+
+/// getBoundingClientReact
+trả ra tọa độ của phần tử
+_DOM.getBoundingClientReact();

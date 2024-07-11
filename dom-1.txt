@@ -1,0 +1,35 @@
++dom.innerHTML -> trả ra thẻ html  bên trong  giống textcontent nhưng có cả html
+
+#####
+###
+class Attribute
++dom.classList.add("class name") -> thêm class vô dom // chỉ thêm đc 1 class không thể them nhiều
++dom.classList.remove("class name") -> xóa class ở dom
++dom.classList.contains("class name") -> kiểm tra dom đó xem có class đó không
+// cách  thêm nhiều class   
++dom.className= 'An Tô xinh đẹp'
+####
+##3
+create update remove Elemnt
++document.createElement("HTML") tạo ra thẻ html 
++dom.appendChild("HTML") -> thêm vào  sau scrip  đc link vào  xuất hiện ở cuối thẻ dom
++document.body.appendChild(html) -> thêm vào cuối của body trước thẻ đóng của nó
+ Ví dụ
+ const Button=document.creatElement("button") -> tạo html button
+ Button.classList.add("An-Tô") -> thêm class cho thẻ buttton vừa tạo
+ Button.textContent="An Tô xinh đẹp"-> thêm nội dung cho thẻ button
+ document.body.appendChild(Button)  -> thêm vào cuối  trước thẻ body 
+
+ ///   CloneNode    copy cái mình vừa tạo thích hợp với những trường hợp duplicate
+ const buttonClone=button.CloneNode(true);
+ document.body.appendChild(buttonClone);
+ 
+ #####
+DOM.CloneNode(true) copy cái mình vừa tạo thích hợp với những trường hợp duplicate
+DOM.hasChildNodes() -> kiểm tra xem DOM đó có tồn tại nodes hay không
+##### insert
+DOM.insertAdjacentText(postision,"content") -> dùng dể chèn text theo 4 vị trí postision
+DOM.insertAdjacentElement(postision,"content") -> dùng dể chèn 1 Element theo 4 vị trí postision  
+DOM.insertAdjacentHTML(postision,"content") -> dùng dể chèn nhieu Element theo 4 vị trí postision  
+-postision: beforegegin,afterbegin,beforeend,afterend
+vi du tao <div class="tab"><div class="tab-list">An Too xinh dep<div class="tab-item">An Too chao cau</div></div></div>

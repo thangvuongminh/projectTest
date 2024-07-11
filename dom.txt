@@ -1,0 +1,35 @@
+DOM
++document.documentElement -> lấy ra thẻ html   ví dụ document.documentElement
+//
++document.body -> lấy ra thẻ body   ví dụ document.body  
+//  
++document.querySelector(selector) selector là những selector đã học ở css ví dụ như header ,h1,heading,#content
+, data-content, a[^=href=""] nếu ko có trả về null
+Ví dụ như document.querySelector("#content"),document.querySelector(".course-item")
+//
++document.querySelectorAll(selector) ; lấy tất cả trả ra 1 danh sách Node list giống mảng nhưng ko phải mảng
+chuyển thành magr dùng array.from(Node list) , [....Nodelist]
++document.querySelectorAll(".course-item") lấy tất cả
+//
++document.getElementsByClassName(className) trả ra html với class   ko cần dùng dấu .  chỉ cần class name khác như querySelector phải có thêm dấu .
+và nó lấy toàn bộ
+//
++document.getElementsByTagName(thẻ html) lấy ra thẻ html ví dụ document.getElementsByTagName('button')
+// 
+document.getElementById(id) lấy la html theo id
+######
+####3
+#ATTRIBUTES  các thuộc tính như src href class lang     
+-dom.getAttribute(?) -> lấy ra giá trị thuộc tính như href , classs ,
+ví dụ  const content=document.querySelectorAll("#content") // lấy tất cả các id  có id là content
+// lấy ra classs  id đó    content.getAttribute("class")
+// 
++dom.setAttribute("attribute","value") thiết lập giá trị cho thuộc tính
++dom.removeAttribute("Attribute") // xóa class
++dom.hasAttribute("Attribute")  //  kiểm tra element có thuộc tính đó hay không có trả ra true và ngược lại
+///
+#########3
+#####
+// content  
++dom.textContent  lấy ra nội dung của thẻ element lấy cái thẻ bên trong  trả ra nội dung chữ  ngay cả chữ bị ẩn
++dom.innerContent lấy ra nội dung bên trong  ko lấy chữ bị ẩn ;
